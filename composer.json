@@ -1,0 +1,30 @@
+{
+    "name": "sudo/adminer",
+    "description": "DB manager Sudo package",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Nguyen Viet Hieu",
+            "email": "hieunvph04479@gmail.com"
+        }
+    ],
+    "require": {
+        "sudo/core": "*@dev",
+        "arcanedev/log-viewer": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sudo\\Adminer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sudo\\Adminer\\Providers\\AdminerServiceProvider"
+            ],
+            "aliases": {}
+        }
+    }
+}
