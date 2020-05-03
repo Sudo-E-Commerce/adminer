@@ -87,15 +87,23 @@ class AdminerServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Chạy riêng log
             $this->publishes([
+                __DIR__.'/../../resources/assets' => public_path('/'),
                 __DIR__.'/../../config/SudoAdminer.php' => config_path('SudoAdminer.php'),
             ], 'sudo/adminer');
+            $this->publishes([
+                __DIR__.'/../../resources/assets' => public_path('/'),
+            ], 'sudo/adminer/assets');
             $this->publishes([
                 __DIR__.'/../../config/SudoAdminer.php' => config_path('SudoAdminer.php'),
             ], 'sudo/adminer/config');
             // Khởi chạy chung theo core
             $this->publishes([
+                __DIR__.'/../../resources/assets' => public_path('/'),
                 __DIR__.'/../../config/SudoAdminer.php' => config_path('SudoAdminer.php'),
             ], 'sudo/core');
+            $this->publishes([
+                __DIR__.'/../../resources/assets' => public_path('/'),
+            ], 'sudo/core/assets');
             $this->publishes([
                 __DIR__.'/../../config/SudoAdminer.php' => config_path('SudoAdminer.php'),
             ], 'sudo/core/config');
