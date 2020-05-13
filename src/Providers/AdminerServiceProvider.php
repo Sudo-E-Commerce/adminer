@@ -85,7 +85,7 @@ class AdminerServiceProvider extends ServiceProvider
     public function publish()
     {
         if ($this->app->runningInConsole()) {
-            // Chạy riêng log
+            // Chạy riêng
             $this->publishes([
                 __DIR__.'/../../resources/assets' => public_path('/'),
                 __DIR__.'/../../config/SudoAdminer.php' => config_path('SudoAdminer.php'),
