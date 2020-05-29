@@ -30,6 +30,7 @@ class AdminerController extends Controller
      * Url = /admin/logs/view
      */
 	public function view() {
+        loadStyleAdmin();
 		return view('Adminer::view');
 	}
 
