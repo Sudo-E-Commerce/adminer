@@ -93,9 +93,9 @@ class AdminerServiceProvider extends ServiceProvider
             ];
             $all = array_merge($assets, $config);
             // Chạy riêng
-            $this->publishes($all, 'sudo/log');
-            $this->publishes($assets, 'sudo/log/assets');
-            $this->publishes($config, 'sudo/log/config');
+            $this->publishes($all, 'sudo/adminer');
+            $this->publishes($assets, 'sudo/adminer/assets');
+            $this->publishes($config, 'sudo/adminer/config');
             // Khởi chạy chung theo core
             $this->publishes($all, 'sudo/core');
             $this->publishes($assets, 'sudo/core/assets');
